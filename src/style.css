@@ -1,0 +1,135 @@
+:root{
+    --background:hsl(235, 21%, 11%);
+    --color:white;
+    --background-image:url("images/bg-desktop-dark.jpg");
+    --inputBackground:hsl(235, 21%, 11%);
+    --inputBorder:1px solid #171616;
+    --iconImg:url("images/icon-moon.svg");
+    --inputColor:#fff;
+    --todoListBackground: hsl(235, 21%, 11%);
+    --todoListBorder: 1px solid gray;
+    --listBackground: hsl(235, 21%, 11%);
+    --listColor: white;
+    --todosCount:white;
+}
+
+
+[data-theme='light']{
+    --background:hsl(0, 0%, 98%);
+    --color:black;
+    --background-image:url("images/bg-desktop-light.jpg");
+    --inputBackground:hsl(234, 39%, 85%);
+    --inputBorder:1px solid #d9d3d3;
+    --inputColor:black;
+    --todoListBackground:  hsl(234, 11%, 52%);
+    --todoListBorder: 1px solid gray;
+    --listBackground: hsl(234, 11%, 52%);
+    --listColor: black;
+    --todosCount:black;
+}
+
+
+
+
+
+.container {
+    background: var(--background);
+    height: 100vh;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    transition: all .5s;
+}
+
+.container-image {
+    background-image: var(--background-image);
+    height: 302px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.header {
+    margin-right: 330px;
+    font-size: 43px;
+}
+
+.switch-theme{
+    background-image: var(--background-image);
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.search{
+    background: var(--inputBackground);
+    border: var(--inputBorder);
+    color: var(--inputColor);
+    outline: none;
+    width: 450px;
+    height: 31px;
+    margin-top: 20px;
+}
+
+.form-containers{
+    position: absolute;
+    top: 63%; right: 50%;
+    transform: translate(50%,-50%);
+    color: white;
+    height: 500px;
+    width: 450px;
+}
+
+
+.todo-list{
+    background: var(--todoListBackground);
+    border: var(--todoListBorder);
+    display: flex;
+    align-items: center;
+    height: 40px;
+    justify-content: space-between;
+}
+
+.todos-count{
+    color:var(--todosCount)
+}
+
+
+.list{
+    background: var(--listBackground);
+    text-decoration: line-through;
+    color: var(--listColor);
+    border: none;
+}
+
+.list:focus{
+    outline: none;
+
+}
+
+input[type=checkbox]{
+    margin-left: 10px;
+}
+
+.delete{
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+
+.check-with-label:checked + .label-for-check {
+  text-decoration: line-through;
+}
+
+.clear-completed-container{
+    right: 0;
+    position: fixed;
+}
